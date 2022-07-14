@@ -1,0 +1,8 @@
+@font-face {
+  src:
+  url(https://pictures.s3.yandex.net/fonts/Inter.woff2) format('woff2'),
+  url(https://pictures.s3.yandex.net/fonts/Inter.woff) format('woff'),
+  url(https://pictures.s3.yandex.net/fonts/Inter.ttf) format('truetype');
+  font-family: 'Inter';
+  font-weight: normal;
+}
