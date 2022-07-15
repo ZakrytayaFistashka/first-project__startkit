@@ -1,5 +1,13 @@
 @import url(../styles/normalize.css);
 
+body {
+  font-family: 'Inter', Arial, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
 .page {
   min-width: 1100px;
   /* мы ещё не умеем делать мобильную версию сайта, */
@@ -8,7 +16,6 @@
   /* выше установили ограничение по максимальной ширине */
   margin: 0 auto;
   /* выше для экранов больше 1600px отцентрировали весь контент */
-  font-family: 'Inter', Arial, sans-serif;
 }
 
 .header {
@@ -18,17 +25,29 @@
   min-height: 600px;
   max-height: 756px;
   /* выше установили ограничения для секции */
+  background-color: #F2F2F2;
+  display: flex;
 }
 
-.title_place_header {
-  font-size: 20px;
-  font-weight: bold;
+.header__title_place {
+  width: 96px;
+  font-size: 102px;
+  font-weight: 600;
 }
 
 /* ниже мы привели пример двух селекторов, чтобы вы вспомнили запись элемента */
+.header__painting-pic {
+  height: 765px;
+  width: 608px;
+  background-image: url(../images/header-image.png);
+  z-index: 10;
+}
+
 .header__square-pic {
   height: 568px;
   width: 568px;
+  background: #2F80ED;
+  z-index: 0;
 }
 
 /* и элемента с модификатором вида ключ-значение */
@@ -37,4 +56,8 @@
   color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+.content {
+  font-size: 0;
 }
