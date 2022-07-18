@@ -1,49 +1,12 @@
 @import url(../styles/normalize.css);
-
-body {
-  font-family: 'Inter', Arial, sans-serif;
-}
-
-h1 {
-  font-size: 102px;
-  font-weight: 600;
-}
-
-h2 {
-  font-size: 60px;
-  font-weight: 600;
-}
-
-h6 {
-  font-size: 18px;
-  font-weight: 400;
-  line-height: 1.2;
-  color: #2f80ed;
-}
-
-p {
-  font-weight: 400;
-  color: #000;
-}
+@import url(../fonts/fonts.css);
 
 * {
   box-sizing: border-box;
 }
 
-.page {
-  min-width: 1100px;
-  max-width: 1600px;
-  margin: 0 auto;
-}
-
-.header {
-  height: 100vh;
-  min-height: 600px;
-  max-height: 756px;
-  background-color: #F2F2F2;
-  display: flex;
-  position: relative;
-  color: #000;
+.centered-block {
+  margin: auto;
 }
 
 .logo {
@@ -108,48 +71,123 @@ p {
 
 /* блоки с контентом */
 .content {
-  font-size: 0;
+  /* width: 80%; */
 }
 
 /* блок description */
 .two-columns {
-  margin: 0 auto;
-  padding: 100px 0;
+  padding-top: 100px;
   width: 80%;
-  min-width: 784px;
-  min-height: auto;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
 }
 
 .two-columns__brief {
+  color: #2F80ED;
+  line-height: 1.2;
   width: 175px;
 }
 
 .two-columns__main-text {
   width: 80%;
+  min-width: 784px
 }
 
 .two-columns__paragraf {
+  padding-bottom: 30px;
   font-size: 24px;
-  line-height: 34px;
   font-weight: 400;
 }
 
-.two-columns__paragraf p {
-  padding-bottom: 30px;
-}
-
-.two-columns__paragraf p:last-child {
-  padding: 0px;
+.two-columns__paragraf_padding_disabled {
+  padding-bottom: 0px;
 }
 
 .two-columns__span-accent {
   font-weight: 600;
 }
 
+.techniques {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
 
+.section-title {
+  width: 60%;
+  padding-top: 100px;
+}
+
+.section-subtitle {
+  width: 60%;
+  padding-top: 20px;
+}
+
+.cards {
+  width: 920px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.cards__item {
+  margin-right: 100px;
+  padding-top: 60px;
+  width: 240px;
+  text-align: center;
+}
+
+.cards__item_margin_disabled {
+  margin-right: 0px;
+}
+
+.cards__image {
+  width: 160px;
+  height: 160px;
+  border-radius: 100%;
+}
+
+.cards__title {
+  padding-top: 43px;
+}
+
+.cards__subtitle {
+  padding-top: 16px;
+  font-size: 18px;
+  line-height: 23px;
+  font-weight: 400;
+}
+
+.digits {
+  display: flex;
+  flex-direction: column;
+}
+
+.table {
+  width: 1100px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.table__cell {
+  width: 250px;
+  margin-top: 60px;
+}
+
+.table__text {
+  padding-top: 20px;
+  font-size: 18px;
+  line-height: 1.2;
+}
+
+.kaufman {
+  display: flex;
+}
 
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
