@@ -1,30 +1,19 @@
-@import url(../styles/normalize.css);
-@import url(../fonts/fonts.css);
-
-* {
-  box-sizing: border-box;
-}
-
-.centered-block {
-  margin: auto;
-}
-
-.logo {
+.header__logo_place_header {
   width: 228px;
   height: 32px;
-}
-
-.logo_place_header {
   top: 30px;
   left: 64px;
-  background-image: url(../images/logo_place_header.svg);
   position: absolute;
   z-index: 10;
 }
 
 .header__title {
   width: 730px;
-  left: 64px;
+  margin-left: 64px;
+  font-size: 102px;
+  line-height: 96px;
+  font-weight: 600;
+  display: flex;
   flex-direction: column;
   justify-content: center;
   z-index: 8;
@@ -36,6 +25,7 @@
   left: 64px;
   font-size: 18px;
   line-height: 25px;
+  font-weight: 400;
   position: absolute;
   z-index: 10;
 }
@@ -54,24 +44,25 @@
   z-index: 1;
 }
 
-.header__main-illustration img {
-  width: 100%;
-  height: 100%;
-}
-
 .header__square-pic {
   width: 568px;
   height: 568px;
   right: 0;
   top: 64px;
   position: absolute;
-  background: #2F80ED;
+  background-color: #2F80ED;
   z-index: 0;
 }
 
 /* блоки с контентом */
 .content {
-  /* width: 80%; */
+  display: flex;
+  flex-direction: column;
+}
+
+.description {
+  display: flex;
+  justify-content: center;
 }
 
 /* блок description */
@@ -84,8 +75,10 @@
 }
 
 .two-columns__brief {
-  color: #2F80ED;
+  font-size: 18px;
   line-height: 1.2;
+  font-weight: 400;
+  color: #2F80ED;
   width: 175px;
 }
 
@@ -97,31 +90,43 @@
 .two-columns__paragraf {
   padding-bottom: 30px;
   font-size: 24px;
+  line-height: 34px;
   font-weight: 400;
 }
 
-.two-columns__paragraf_padding_disabled {
-  padding-bottom: 0px;
+.two-columns__paragraf:last-of-type {
+  padding-bottom: 0;
 }
 
 .two-columns__span-accent {
   font-weight: 600;
 }
 
+/* блок techniques */
 .techniques {
+  margin: auto;
   width: 80%;
+  padding-top: 100px;
   display: flex;
+  align-items: center;
   flex-direction: column;
 }
 
 .section-title {
   width: 60%;
-  padding-top: 100px;
+  font-size: 60px;
+  line-height: 1.15;
+  font-weight: 600;
+  text-align: center;
 }
 
 .section-subtitle {
   width: 60%;
   padding-top: 20px;
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+  text-align: center;
 }
 
 .cards {
@@ -139,8 +144,8 @@
   text-align: center;
 }
 
-.cards__item_margin_disabled {
-  margin-right: 0px;
+.cards__item:nth-of-type(3n) {
+  margin-right: 0;
 }
 
 .cards__image {
@@ -151,6 +156,9 @@
 
 .cards__title {
   padding-top: 43px;
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 600;
 }
 
 .cards__subtitle {
@@ -162,7 +170,23 @@
 
 .digits {
   display: flex;
+  align-items: center;
   flex-direction: column;
+  padding: 100px 0;
+}
+
+.section-title {
+  font-size: 60px;
+  line-height: 1.15;
+  font-weight: 600;
+  text-align: center;
+}
+
+.section-subtitle {
+  font-size: 24px;
+  line-height: 34px;
+  font-weight: 400;
+  text-align: center;
 }
 
 .table {
@@ -179,20 +203,74 @@
   margin-top: 60px;
 }
 
+.table__heading {
+  font-size: 24px;
+  line-height: 1.15;
+  font-weight: 600;
+}
+
 .table__text {
   padding-top: 20px;
   font-size: 18px;
   line-height: 1.2;
+  font-weight: 400;
 }
 
 .kaufman {
+  width: 100%;
+  padding: 90px 0;
   display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: #1f1f1f;
+  color: white;
 }
 
 /* и элемента с модификатором вида ключ-значение */
 .table__cell_theme_dark {
   width: 200px;
-  color: white;
   margin-right: 0;
   margin-top: 80px;
+}
+
+.resources {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  margin: 100px auto 217px auto;
+}
+
+.resources__logo-zone {
+  width: 1100px;
+  margin-top: 60px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.resources__link {
+}
+
+.resources__logo {
+  width: 270px;
+  height: 38px;
+  text-align: center;
+}
+
+
+/* все ссылки, которые пользователь не трогал, будут синие */
+a:link {
+  color: #2f80ed;
+}
+/* ссылки, по которым пользователь переходил, сделаем серыми, бледными */
+a:visited {
+  color: #2f80ed;
+}
+/* ссылка, на которую пользователь навёл курсор, сменит цвет на зеленый */
+a:hover {
+  color: #2f80ed;
+}
+/* в момент клика ссылка станет красной */
+a:active {
+  color: #f00;
 }
